@@ -47,6 +47,7 @@ function tahnoutJmeno() {
 
     // Výherní jméno si uložíme do pole k ostatním výherním
     tazenaJmena.unshift(vyherniJmeno);
+    
 
     let vyherce = document.querySelector('#vyherka');
     vyherce.textContent = vyherniJmeno;
@@ -57,9 +58,9 @@ function tahnoutJmeno() {
     let pocetTazenych = document.querySelector('#pocitadlo');
     pocetTazenych.textContent = 'Počet vyvolaných: ' + tazenaJmena.length;
 
-
+   
 }
 
 function restartuj() {
-    
+    location.reload(); 
 }
