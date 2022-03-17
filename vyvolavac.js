@@ -29,7 +29,9 @@ let jmena = [
 
 let tazenaJmena = [];
 
+
 function tahnoutJmeno() {
+    // pojistka, až se vztáhnou všechna jména, funkce se ukončí (return)
     if (jmena.length === 0) {
         return;
     }
@@ -44,11 +46,20 @@ function tahnoutJmeno() {
     jmena.splice(vyherniIndex, 1);
 
     // Výherní jméno si uložíme do pole k ostatním výherním
-    tazenaJmena.push(vyherniJmeno);
+    tazenaJmena.unshift(vyherniJmeno);
 
     let vyherce = document.querySelector('#vyherka');
     vyherce.textContent = vyherniJmeno;
 
     let seznam = document.querySelector('#seznam');
     seznam.textContent = tazenaJmena;
+
+    let pocetTazenych = document.querySelector('#pocitadlo');
+    pocetTazenych.textContent = 'Počet vyvolaných: ' + tazenaJmena.length;
+
+
+}
+
+function restartuj() {
+    
 }
